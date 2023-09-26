@@ -1,7 +1,7 @@
-# /Users/bmcgahan/.config/tmuxinator/bwmmwbv2.yml
+# /Users/bmcgahan/.config/tmuxinator/zsh.yml
 
-name: bwmmwbv2
-root: ~/Documents/projects/bwmmwbv2
+name: zsh
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -46,5 +46,12 @@ root: ~/Documents/projects/bwmmwbv2
 
 windows:
   - editor:
-  - server: 
-  - logs: 
+      layout: main-vertical
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - vim
+        - guard
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log
