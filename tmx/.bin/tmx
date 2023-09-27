@@ -2,45 +2,47 @@
 
 selected=$(find ~/personal ~/school ~/.dotfiles ~/.config -mindepth 1 -maxdepth 1 -type d | fzf)
 
+# cd $selected
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+#
+#
+# selected_name=$(basename "$selected" | tr . _)
+# zellij_running=$(pgrep zellij)
+#
+# if [[ $zellij_running ]]; then
+#     if zellij ls | grep $selected_name; then
+#         zellij a $selected_name
+#     else 
+#         zellij -s $selected_name
+#     fi
+# else
+#     if zellij ls | grep $selected_name; then
+#         zellij a $selected_name
+#     else 
+#         zellij -s $selected_name
+#     fi
+# fi
+
 if [[ -z $selected ]]; then
     exit 0
 fi
 
-
 selected_name=$(basename "$selected" | tr . _)
-zellij_running=$(pgrep zellij)
+tmux_running=$(pgrep tmux)
 
-if [[ $zellij_running ]]; then
-    if zellij ls | grep $selected_name; then
-        zellij a $selected_name
-    else 
-        zellij -s $selected_name
-    fi
-else
-    if zellij ls | grep $selected_name; then
-        zellij a $selected_name
-    else 
-        zellij -s $selected_name
-    fi
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $selected_name -c $selected
+    exit 0
 fi
 
-# if [[$tmux_running > 1]]; then
-#         tmux detach
-#         if tmux ls | grep $selected_name; then
-#             tmux a $selected_name
-#     else
-#             cd $selected
-#             tmux new-session -t $selected_name
-#         fi
-# else
-#         if tmux ls | grep $selected_name; then
-#             tmux a $selected_name
-#     else
-#             cd $selected
-#             tmux new-session -t $selected_name
-#         fi
-# fi
+if ! tmux has-session -t=$selected_name 2> /dev/null; then
+    tmux new-session -ds $selected_name -c $selected
+fi
 
+tmux switch-client -t $selected_name
 
 
 
