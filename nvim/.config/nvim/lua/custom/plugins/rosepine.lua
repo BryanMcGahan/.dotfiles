@@ -8,7 +8,7 @@ return {
             variant = 'auto',
             dark_variant = 'moon',
             dim_nc_background = true,
-            disable_background = true,
+            disable_background = false,
             bold_vert_split = false,
             disable_float_background = true,
         })
