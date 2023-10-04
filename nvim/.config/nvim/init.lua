@@ -31,6 +31,7 @@ require('lazy').setup({
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
+  'nvim-telescope/telescope-project.nvim',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -113,6 +114,9 @@ require('lazy').setup({
   --   'navarasu/onedark.nvim',
   --   priority = 1000,
   --   config = function()
+  --     require('onedark').setup({
+  --       style = 'warmer'
+  --     })
   --     vim.cmd.colorscheme 'onedark'
   --   end,
   -- },
@@ -253,6 +257,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
+  project_actions = require("telescope._extensions.project.actions"),
   defaults = {
     mappings = {
       i = {
