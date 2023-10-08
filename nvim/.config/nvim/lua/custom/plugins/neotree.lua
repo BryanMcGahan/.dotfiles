@@ -18,6 +18,30 @@ return {
           ['g'] = function() vim.api.nvim_exec('Neotree focus git_status left', true) end,
         },
       },
+      default_component_config = {
+        icon = {
+          folder_closed = "",
+          folder_open = "",
+          folder_empty = "󰉘"
+        },
+        modified = {
+          symbol = "+"
+        },
+        git_status = {
+          symbols = {
+            added     = "✚", -- or , but this is redundant info if you use git_status_colors on the name
+            modified  = "", -- or "", but this is redundant info if you use git_status_colors on the name
+            deleted   = "✖", -- this can only be used in the git_status source
+            renamed   = "󰁕", -- this can only be used in the git_status source
+            -- Status type
+            untracked = "",
+            ignored   = "",
+            unstaged  = "󰄱",
+            staged    = "",
+            conflict  = "",
+          }
+        }
+      },
       filesystem = {
         filtered_items = {
           visible = true, -- when true, they will just be displayed differently than normal items
@@ -36,7 +60,6 @@ return {
           },
           never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
             --".DS_Store",
-            --"thumbs.db"
           },
           never_show_by_pattern = { -- uses glob style patterns
             --".null-ls_*",

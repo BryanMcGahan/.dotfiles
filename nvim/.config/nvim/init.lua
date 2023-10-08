@@ -84,9 +84,9 @@ require('lazy').setup({
     opts = {
       -- See `:help gitsigns.txt`
       signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
+        add = { text = '' },
+        change = { text = '' },
+        delete = { text = '󰗨' },
         topdelete = { text = '‾' },
         changedelete = { text = '~' },
       },
@@ -115,7 +115,10 @@ require('lazy').setup({
   --   priority = 1000,
   --   config = function()
   --     require('onedark').setup({
-  --       style = 'warmer'
+  --       style = "warmer",
+  --       lualine = {
+  --         transparent = true
+  --       }
   --     })
   --     vim.cmd.colorscheme 'onedark'
   --   end,
@@ -127,7 +130,7 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'auto',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },

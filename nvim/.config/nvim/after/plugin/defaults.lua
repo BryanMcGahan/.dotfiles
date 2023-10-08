@@ -17,7 +17,6 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set({ 'n', 'v', 'i', 'o' }, '<F1>', '<cmd><cr>')
 vim.opt.relativenumber = true;
-vim.opt.cursorline = true;
 vim.opt.scrolloff = 10;
 
 vim.opt.tabstop = 4
