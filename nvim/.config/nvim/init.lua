@@ -1,7 +1,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -109,20 +108,23 @@ require('lazy').setup({
     },
   },
 
-  -- {
-  --   -- Theme inspired by Atom
-  --   'navarasu/onedark.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     require('onedark').setup({
-  --       style = "warmer",
-  --       lualine = {
-  --         transparent = true
-  --       }
-  --     })
-  --     vim.cmd.colorscheme 'onedark'
-  --   end,
-  -- },
+  {
+    -- Theme inspired by Atom
+    'navarasu/onedark.nvim',
+    priority = 1000,
+    config = function()
+      require('onedark').setup({
+        style = "deep",
+        code_style = {
+          comments = 'italic',
+          keywords = "none",
+          functions = 'bold'
+        }
+
+      })
+      -- vim.cmd.colorscheme 'onedark'
+    end,
+  },
 
   {
     -- Set lualine as statusline
@@ -262,6 +264,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('telescope').setup {
   project_actions = require("telescope._extensions.project.actions"),
   defaults = {
+    layout_strategy = 'vertical',
+    layout_config = { height = 0.95 },
     mappings = {
       i = {
         ['<C-u>'] = false,
@@ -281,7 +285,7 @@ vim.keymap.set('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
     winblend = 10,
-    previewer = false,
+    previewer = true,
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
 
