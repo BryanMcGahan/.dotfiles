@@ -6,6 +6,9 @@ vim.keymap.set('n', '<leader>tm', '<cmd>silent !tmux neww tmx<cr>')
 vim.keymap.set('n', '<leader>hm', '<cmd>lua require("harpoon.mark").add_file()<cr>')
 vim.keymap.set('n', '<leader>hv', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>')
 vim.keymap.set('n', '<leader>db', '<cmd>bd<cr>')
+vim.keymap.set('n', '<leader>pd', '<cmd>Telescope neovim-project discover<cr>')
+vim.keymap.set('n', '<leader>ph', '<cmd>Telescope neovim-project history<cr>')
+vim.keymap.set('n', '<leader>pl', '<cmd>NeovimProjectLoadRecent<cr>')
 
 vim.keymap.set('n', '<leader>pb', '<cmd>bp<cr>')
 vim.keymap.set('n', '<leader>nb', '<cmd>bn<cr>')
@@ -35,3 +38,4 @@ vim.opt.termguicolors = true
 --         end
 --     end,
 -- })
+vim.cmd("colorscheme gruvbox-material")
