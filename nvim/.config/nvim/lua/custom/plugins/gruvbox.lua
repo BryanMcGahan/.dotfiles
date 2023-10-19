@@ -1,1 +1,1 @@
-return {"sainnhe/gruvbox-material"}
+return {"morhetz/gruvbox"}

@@ -19,23 +19,17 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set({ 'n', 'v', 'i', 'o' }, '<F1>', '<cmd><cr>')
+
+
 vim.opt.relativenumber = true;
 vim.opt.scrolloff = 10;
+vim.opt.cursorline = true;
+vim.opt.cursorcolumn = false;
+
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
 vim.opt.termguicolors = true
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "kanagawa",
---     callback = function()
---         if vim.o.background == "light" then
---             vim.fn.system("kitty +kitten themes Kanagawa_light")
---         elseif vim.o.background == "dark" then
---             vim.fn.system("kitty +kitten themes Kanagawa_dragon")
---         else
---             vim.fn.system("kitty +kitten themes Kanagawa")
---         end
---     end,
--- })
-vim.cmd("colorscheme gruvbox-material")
+
+vim.cmd("colorscheme kanagawa")

@@ -14,6 +14,7 @@ alias cds="zi"
 alias ls="exa"
 alias personal="cd ~/personal"
 alias school="cd ~/school"
+alias vim="nvim"
 export EDITOR=nvim
 eval "$(starship init zsh)"
 
@@ -34,3 +35,4 @@ export PATH=$PATH:~/.emacs.d/bin
 
 
 alias zel="zellij"
+CLICOLOR=1
