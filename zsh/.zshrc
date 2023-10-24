@@ -25,6 +25,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 export PATH=$PATH:~/.emacs.d/bin
+export PATH=$PATH:~/go/bin
 
 # export FZF_DEFAULT_OPTS="
 # 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
@@ -34,5 +35,6 @@ export PATH=$PATH:~/.emacs.d/bin
 # 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 
 
-alias zel="zellij"
-CLICOLOR=1
+alias zel="zellij a"
+alias zel-s="zellij --session"
+eval $(thefuck --alias)
