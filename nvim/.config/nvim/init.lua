@@ -384,20 +384,20 @@ end
 --  define the property 'filetypes' to the map in question.
 local servers = {
   clangd = {},
-  gopls = {},
-  pyright = {},
-  rust_analyzer = {},
+  -- gopls = {},
+  -- pyright = {},
+  -- rust_analyzer = {},
   tsserver = {},
-  html = { filetypes = { 'html', 'twig', 'hbs'} },
+  -- html = { filetypes = { 'html', 'twig', 'hbs'} },
   -- emmet_ls = {},
 
 
-  lua_ls = {
-    Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    },
-  },
+  -- lua_ls = {
+  --   Lua = {
+  --     workspace = { checkThirdParty = false },
+  --     telemetry = { enable = false },
+  --   },
+  -- },
 }
 
 -- Setup neovim lua configuration
