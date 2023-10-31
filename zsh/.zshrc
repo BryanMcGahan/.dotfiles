@@ -37,4 +37,5 @@ export PATH=$PATH:~/go/bin
 
 alias zel="zellij a"
 alias zel-s="zellij --session"
+export TERM=xterm-256color
 # eval $(thefuck --alias)
