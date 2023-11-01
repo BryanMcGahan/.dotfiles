@@ -9,8 +9,8 @@
 eval "$(zoxide init zsh)"
 
 PATH=${PATH}:$HOME/.bin
-alias cd="z"
-alias cds="zi"
+# alias cd="z"
+# alias cds="zi"
 alias ls="exa"
 alias personal="cd ~/personal"
 alias school="cd ~/school"
