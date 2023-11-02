@@ -1,1 +1,3 @@
-return {'nordtheme/vim'}
+return {
+  'shaunsingh/nord.nvim',
+}
