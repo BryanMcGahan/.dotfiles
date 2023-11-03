@@ -1,11 +1,3 @@
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
-fi
-
-if [ "$TMUX" = "" ]; then 
-	tmux a || tmux new-session -t default
-fi
-
 eval "$(zoxide init zsh)"
 
 PATH=${PATH}:$HOME/.bin
