@@ -18,4 +18,5 @@ yabai -m mouse_drop_action swap
 
 
 yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^OnyX$" manage=off
 

@@ -10,8 +10,8 @@ return {
             dim_nc_background = true,
             disable_background = false,
             bold_vert_split = false,
-            disable_float_background = true,
+            disable_float_background = false,
+            disable_italics = true
         })
-        -- vim.cmd('colorscheme rose-pine')
     end
 }
