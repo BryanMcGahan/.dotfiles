@@ -8,7 +8,10 @@ return{
     opts = {
       autohide = true,
       focus_on_close = 'previous',
-      no_name_title = 'NotADamnThing'
+      no_name_title = 'NotADamnThing',
+      sidebar_filetypes = {
+        NvimTree = true
+      }
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },

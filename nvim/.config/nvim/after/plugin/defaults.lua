@@ -1,7 +1,8 @@
 vim.keymap.set('n', '<leader>ut', '<cmd>UndotreeToggle<cr>')
 vim.keymap.set('n', '<leader>ft', '<cmd>Format<cr>')
-vim.keymap.set('n', '<leader>o', '<cmd>Oil<cr>')
--- vim.keymap.set('n', '<leader>o', '<cmd>Neotree toggle<cr>')
+-- vim.keymap.set('n', '<leader>o', '<cmd>Oil<cr>')
+vim.keymap.set('n', '<leader>o', '<cmd>NvimTreeToggle<cr>')
+
 vim.keymap.set('n', '<leader>tm', '<cmd>silent !tmux neww tmx<cr>')
 vim.keymap.set('n', '<leader>hm', '<cmd>lua require("harpoon.mark").add_file()<cr>')
 vim.keymap.set('n', '<leader>hv', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>')
