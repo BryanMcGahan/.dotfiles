@@ -5,6 +5,7 @@ return {
   config = function()
     require('onedark').setup({
       style = 'warmer',
+      transparent = true,
       code_style = {
         comments = 'italic',
         keywords = "none",

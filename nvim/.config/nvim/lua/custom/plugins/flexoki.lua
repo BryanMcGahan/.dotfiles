@@ -1,3 +1,1 @@
-return {
-  { 'stevedylandev/flexoki-nvim', name = 'flexoki' }
-}
+return { 'kepano/flexoki-neovim', name = 'flexoki' }
