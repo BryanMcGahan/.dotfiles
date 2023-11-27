@@ -4,8 +4,8 @@ return {
   priority = 1000,
   config = function()
     require('onedark').setup({
-      style = 'warmer',
-      transparent = true,
+      style = 'darker',
+      transparent = false,
       code_style = {
         comments = 'italic',
         keywords = "none",

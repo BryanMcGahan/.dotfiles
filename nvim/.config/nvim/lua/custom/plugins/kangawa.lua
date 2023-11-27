@@ -9,7 +9,7 @@ return {
       functionStyle = { bold = true },
       keywordStyle = { italic = true },
       statementStyle = { bold = true },
-      transparent = true,   -- do not set background color
+      transparent = false,   -- do not set background color
       dimInactive = true,    -- dim inactive window `:h hl-NormalNC`
       terminalColors = true, -- define vim.g.terminal_color_{0,17}
       colors = {
@@ -23,7 +23,7 @@ return {
       },
       theme = "wave",    -- Load "wave" theme when 'background' option is not set
       background = {     -- map the value of 'background' option to a theme
-        dark = "dragon", -- try "dragon" !
+        dark = "wave", -- try "dragon" !
         light = "lotus"
       },
       overrides = function(colors)
