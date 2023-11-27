@@ -9,7 +9,8 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/rose-pine.yml
+  # - ~/.config/alacritty/rose-pine.yml
+  - ~/.config/alacritty/oxocarbon.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -41,8 +42,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-   x: 0
-   y: 0
+   x: 8
+   y: 4
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -105,7 +106,7 @@ window:
   #   - OnlyRight
   #   - Both
   #   - None (default)
-  #option_as_alt: None
+  option_as_alt: None
 
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -185,7 +186,7 @@ font:
   # If `true`, Alacritty will use a custom built-in font for box drawing
   # characters (Unicode points 2500 - 259f).
   #
-  #builtin_box_drawing: true
+  builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -258,7 +259,7 @@ font:
   #   - EaseOutExpo
   #   - EaseOutCirc
   #   - Linear
-  #animation: EaseOutExpo
+  animation: EaseOutExpo
 
   # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
   # disable the visual bell animation.
@@ -317,7 +318,7 @@ font:
   #vi_mode_style: None
 
   # Cursor blinking interval in milliseconds.
-  #blink_interval: 750
+  blink_interval: 750
 
   # Time after which cursor stops blinking, in seconds.
   #
