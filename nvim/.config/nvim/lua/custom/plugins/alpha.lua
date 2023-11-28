@@ -29,7 +29,7 @@ return {
     }
 
     dashboard.section.buttons.val = {
-      dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+      dashboard.button("e", " New file", ":ene <BAR> startinsert <CR>"),
       dashboard.button("SPC ?", "󰥔 Recents", ":Telescope oldfiles<CR>"),
       dashboard.button("SPC sf", "󰈔 Find File", ":Telescope find_files<CR>")
     }
