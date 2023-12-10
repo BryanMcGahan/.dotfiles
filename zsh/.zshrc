@@ -6,7 +6,6 @@ PATH=${PATH}:$HOME/.bin
 alias ls="exa"
 alias personal="cd ~/personal"
 alias school="cd ~/school"
-alias vim="nvim"
 export EDITOR=nvim
 eval "$(starship init zsh)"
 
@@ -30,7 +29,6 @@ export PATH=$PATH:~/go/bin
 alias zel="zellij a"
 alias zel-s="zellij --session"
 export TERM=xterm-256color
-# eval $(thefuck --alias)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

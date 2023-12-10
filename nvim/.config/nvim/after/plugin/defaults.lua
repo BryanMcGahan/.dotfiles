@@ -1,7 +1,8 @@
 vim.keymap.set('n', '<leader>ut', '<cmd>UndotreeToggle<cr>')
 vim.keymap.set('n', '<leader>ft', '<cmd>Format<cr>')
--- vim.keymap.set('n', '<leader>o', '<cmd>Oil<cr>')
-vim.keymap.set('n', '<leader>o', '<cmd>NvimTreeToggle<cr>')
+vim.keymap.set('n', '<leader>o', '<cmd>Oil<cr>')
+-- vim.keymap.set('n', '<leader>o', '<cmd>NvimTreeToggle<cr>')
+vim.keymap.set('n', '<leader>b', '<c-^>')
 
 vim.keymap.set('n', '<leader>tm', '<cmd>silent !tmux neww tmx<cr>')
 vim.keymap.set('n', '<leader>hm', '<cmd>lua require("harpoon.mark").add_file()<cr>')
@@ -30,4 +31,15 @@ vim.opt.shiftwidth = 4
 
 vim.opt.termguicolors = true
 
-vim.cmd("colorscheme oxocarbon")
+vim.cmd("colorscheme rose-pine")
+
+
+local harpoon = require('harpoon')
+harpoon:setup()
+
+vim.keymap.set("n", "<leader>ha", function ()
+	harpoon:list():append()
+end)
+vim.keymap.set("n", "<leader>hl", function ()
+	harpoon.ui:toggle_quick_menu(harpoon:list())
+end)

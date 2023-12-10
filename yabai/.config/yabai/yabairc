@@ -7,7 +7,7 @@ yabai -m config right_padding 8
 yabai -m config left_padding 8
 yabai -m config window_gap 8
 
-yabai -m config mouse_follows_focus on
+yabai -m config mouse_follows_focus off
 yabai -m config focus_follows_mouse autofocus
 yabai -m config active_window_opactiy 1.0
 yabai -m config normal_window_opacity 0.90

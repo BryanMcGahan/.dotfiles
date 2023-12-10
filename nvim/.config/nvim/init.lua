@@ -105,7 +105,7 @@ require('lazy').setup({
       options = {
         always_divide_middle = false,
         icons_enabled = true,
-        theme = 'auto',
+        theme = 'rose-pine-alt',
          component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
       },
@@ -225,6 +225,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('telescope').setup {
   project_actions = require("telescope._extensions.project.actions"),
   defaults = {
+    file_ignore_patterns = {
+      "^node_modules/",
+      "^.git/",
+    },
     layout_strategy = 'vertical',
     layout_config = { height = 0.95 },
     mappings = {
@@ -389,8 +393,7 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   tsserver = {},
-  -- html = { filetypes = { 'html', 'twig', 'hbs'} },
-  emmet_ls = { filetypes = {'css', 'javascript', 'html', 'javascriptreact'} },
+  html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
     Lua = {
