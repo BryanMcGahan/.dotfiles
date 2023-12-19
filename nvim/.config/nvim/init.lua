@@ -1,5 +1,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -105,7 +107,7 @@ require('lazy').setup({
       options = {
         always_divide_middle = false,
         icons_enabled = true,
-        theme = 'rose-pine-alt',
+        theme = 'tokyonight',
          component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
       },
@@ -393,7 +395,7 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   tsserver = {},
-  html = { filetypes = { 'html', 'twig', 'hbs'} },
+  html = { filetypes = { 'html', 'twig', 'hbs', 'javascript.jsx', 'typescript.tsx'} },
 
   lua_ls = {
     Lua = {

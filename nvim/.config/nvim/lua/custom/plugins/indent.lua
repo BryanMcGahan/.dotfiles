@@ -3,7 +3,8 @@ return {
   main = "ibl",
   opts = {
     scope = {
-      enabled = false
+      enabled = true,
+      show_start = false,
     }
   },
 }
