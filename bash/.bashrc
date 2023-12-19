@@ -115,7 +115,8 @@ fi
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
-alias cd="z"
+# alias cd="z"
+alias ls="eza"
 
 export PATH=~/.bin:$PATH
 

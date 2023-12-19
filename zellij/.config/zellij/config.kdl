@@ -193,7 +193,7 @@ plugins {
 //    - true
 //    - false (Default)
 //
- simplified_ui true
+ simplified_ui false
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
@@ -219,25 +219,24 @@ pane_frames false
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
 themes {
-    default {
-        fg 1
-        bg 10
-        black 20
-        red 30
-        green 40
-        yellow 50
-        blue 60
-        magenta 70
-        cyan 80
-        white 90
-        orange 254
-    }
+	rose-pine {
+		bg "#191724"
+		fg "#e0def4"
+		red "#eb6f92"
+		green "#31748f"
+		blue "#9ccfd8"
+		yellow "#f6c177"
+		magenta "#c4a7e7"
+		orange "#fe640b"
+		cyan "#ebbcba"
+		black "#26233a"
+		white "#e0def4"
+	}
 }
-
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
- theme "kanagawa"
+ theme "rose-pine"
 
 // The name of the default layout to load on startup
 // Default: "default"
