@@ -396,7 +396,6 @@ local servers = {
   -- rust_analyzer = {},
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs', 'javascript.jsx', 'typescript.tsx'} },
-
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
@@ -429,6 +428,12 @@ mason_lspconfig.setup_handlers {
     }
   end
 }
+
+vim.filetype.add({
+  extension = {
+    templ = "templ"
+  }
+})
 
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
