@@ -10,16 +10,11 @@
       ./hardware-configuration.nix
     ];
 
-  environment.pathsToLink = ["/libexec"];
-
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "GigaNixOS"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -47,35 +42,69 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
+
+  # Enable the GNOME Desktop Environment.
+  #services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.desktopManager.gnome.enable = true;
+
   # Configure keymap in X11
   services.xserver = {
-	  enable = true;
-	  layout = "us";
-	  xkbVariant = "";
+    layout = "us";
+    xkbVariant = "";
 
-	  desktopManager = {
-		  xterm.enable = false;
-	  };
-	  displayManager = {
-		  defaultSession = "none+i3";
-	  };
-	  windowManager.i3 = {
-		  enable = true;
-		  extraPackages = with pkgs; [
-			  dmenu
-				  i3status
-				  i3lock
-				  i3blocks
-		  ];
-	  };
+    desktopManager = {
+      xterm.enable = false;
+    };
+
+    displayManager = {
+      defaultSession = "none+i3";
+    };
+    
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        dmenu
+        i3status
+        i3lock-color
+        i3blocks
+      ];
+    };
   };
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+
+  # Enable sound with pipewire.
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    jack.enable = true;
+
+    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # no need to redefine it in your config for now)
+    #media-session.enable = true;
+  };
+
+  # Enable touchpad support (enabled default in most desktopManager).
+  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.bmcgahan = {
     isNormalUser = true;
     description = "Bryan McGahan";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [
+      firefox
+      thunderbird
+    ];
   };
 
   # Allow unfree packages
@@ -84,34 +113,56 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    firefox
-    neovim
-    ripgrep
-    ranger
-    kitty
-    neofetch
-    git
-    stow
-    gccgo13
-    zsh
-    zoxide
-    eza
-    bat
-    tmux
-    starship
-    obsidian
-    tldr
-    nodejs_20
-    unzip
-    cinnamon.nemo-with-extensions
-    fzf
+  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  kitty
+  git
+  bat
+  zoxide
+  eza
+  zsh
+  tldr
+  ripgrep
+  lxappearance
+  flameshot
+  htop
+  ranger
+  neofetch
+  bemenu
+  neovim
+  acpi
+  pulseaudioFull
+  stow
+  tmux
+  starship
+  cmake
+  gccgo13
+  fzf
+  nodejs_20
+  gnome.nautilus
+  xsettingsd
+  feh
+  materia-theme
+  material-icons
+  go
+  polybar
+  alsa-utils
+  unzip
+  logseq
+  discord
+  zellij
+  gnumake
+  llvmPackages_9.clang-unwrapped
+  rocmPackages.llvm.clang-tools-extra
   ];
 
-  fonts.packages = with pkgs; [
-    nerdfonts
-  ];
 
+ fonts.packages = with pkgs; [
+   nerdfonts
+   font-awesome
+ ];
+
+ # services.picom.enable = true;
+  #security.polkit.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -124,7 +175,9 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
+  services.blueman.enable = true;
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -138,5 +191,14 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
+
+
+  programs.hyprland.enable = true;
+
+              
+              nixpkgs.config.permittedInsecurePackages = [
+                "electron-25.9.0"
+              ];
+            
 
 }
