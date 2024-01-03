@@ -8,7 +8,7 @@ return {
             variant = 'auto',
             dark_variant = 'main',
             dim_nc_background = true,
-            disable_background = false,
+            disable_background = true,
             bold_vert_split = false,
             disable_float_background = true,
             disable_italics = true

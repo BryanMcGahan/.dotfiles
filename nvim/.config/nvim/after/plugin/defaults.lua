@@ -32,7 +32,7 @@ vim.opt.shiftwidth = 4
 
 vim.opt.termguicolors = true
 
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme kanagawa")
 
 
 local harpoon = require('harpoon')
