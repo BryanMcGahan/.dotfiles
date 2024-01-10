@@ -20,11 +20,18 @@ end
 config.color_scheme = 'nightfox'
 
 config.font = wezterm.font('JetBrainsMono Nerd Font')
-config.font_size = 12
 
+local font_size
+local hostname = wezterm.hostname()
+if hostname == "GigaLaptop.local" then
+  font_size = 14
+else
+  font_size = 12
+end
+
+config.font_size = font_size
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
-
 
 -- and finally, return the configuration to wezterm
 return config
