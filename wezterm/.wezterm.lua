@@ -17,13 +17,15 @@ end
 -- config.color_scheme = 'nord'
 -- config.color_scheme = 'One Dark (Gogh)'
 -- config.color_scheme = 'Kanagawa (Gogh)'
-config.color_scheme = 'nightfox'
+-- config.color_scheme = 'nightfox'
+-- config.color_scheme = 'Flexoki (Dark)'
+config.color_scheme = 'OneDark (base16)'
 
-config.font = wezterm.font('JetBrainsMono Nerd Font')
+config.font = wezterm.font('Hack Nerd Font Mono')
 
 local font_size
 local hostname = wezterm.hostname()
-if hostname == "GigaLaptop.local" then
+if hostname == "GigaLaptop.home" or hostname == "GigaLaptop.local" then
   font_size = 14
 else
   font_size = 12

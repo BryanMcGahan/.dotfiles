@@ -11,6 +11,7 @@ alt - l : yabai -m window --focus east
 
 # Rotating and moving windows
 shift + alt - r : yabai -m space --rotate 270
+shift + alt - e : yabai -m space --rotate 180
 shift + alt - y : yabai -m space --mirror y-axis
 shift + alt - x : yabai -m space --mirror x-axis
 

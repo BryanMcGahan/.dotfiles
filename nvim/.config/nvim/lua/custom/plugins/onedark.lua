@@ -4,12 +4,15 @@ return {
   priority = 1000,
   config = function()
     require('onedark').setup({
-      style = 'darker',
+      style = 'dark',
       transparent = false,
       code_style = {
         comments = 'italic',
         keywords = "none",
-        functions = 'bold'
+        functions = 'none'
+      },
+      lualine = {
+        transparent = true
       }
 
     })
