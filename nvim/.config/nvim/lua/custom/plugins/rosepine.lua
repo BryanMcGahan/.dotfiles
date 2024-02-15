@@ -6,12 +6,17 @@ return {
     config = function()
         require("rose-pine").setup({
             variant = 'auto',
-            dark_variant = 'main',
-            dim_nc_background = true,
-            disable_background = true,
-            bold_vert_split = false,
-            disable_float_background = true,
-            disable_italics = true
+            dark_variant = 'moon',
+            dim_inactive_windows = true,
+            extend_background_behind_borders = false,
+            highlight_groups = {
+                TelescopeBorder = { fg = "highlight_high", bg = "none" },
+                TelescopeNormal = { bg = "none" },
+                TelescopePromptNormal = { bg = "base" },
+                TelescopeResultsNormal = { fg = "subtle", bg = "none" },
+                TelescopeSelection = { fg = "text", bg = "base" },
+                TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
+            }
         })
     end
 }

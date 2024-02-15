@@ -1,17 +1,12 @@
 vim.keymap.set('n', '<leader>ut', '<cmd>UndotreeToggle<cr>')
 vim.keymap.set('n', '<leader>ft', '<cmd>Format<cr>')
--- vim.keymap.set('n', '<leader>o', '<cmd>Oil<cr>')
-vim.keymap.set('n', '<leader>o', '<cmd>NvimTreeToggle<cr>')
-vim.keymap.set('n', '<leader>b', '<c-^>')
-vim.keymap.set('n', '<leader>dt', '<cmd>TroubleToggle<cr>')
+vim.keymap.set('n', '<leader>o', '<cmd>Oil<cr>')
+vim.keymap.set('n', '<leader>e', '<cmd>:lua require("oil").open_float()<cr>')
 
-vim.keymap.set('n', '<leader>tm', '<cmd>silent !tmux neww tmx<cr>')
-vim.keymap.set('n', '<leader>hm', '<cmd>lua require("harpoon.mark").add_file()<cr>')
-vim.keymap.set('n', '<leader>hv', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>')
+vim.keymap.set('n', '<leader>t', '<cmd>TroubleToggle<cr>')
+
+vim.keymap.set('n', '<F12>', '<cmd>silent !tmux neww tmx<cr>')
 vim.keymap.set('n', '<leader>db', '<cmd>bd<cr>')
-vim.keymap.set('n', '<leader>pd', '<cmd>Telescope neovim-project discover<cr>')
-vim.keymap.set('n', '<leader>ph', '<cmd>Telescope neovim-project history<cr>')
-vim.keymap.set('n', '<leader>pl', '<cmd>NeovimProjectLoadRecent<cr>')
 
 vim.keymap.set('n', '<leader>pb', '<cmd>bp<cr>')
 vim.keymap.set('n', '<leader>nb', '<cmd>bn<cr>')
@@ -23,24 +18,25 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set({ 'n', 'v', 'i', 'o' }, '<F1>', '<cmd><cr>')
 
+-- vim.opt.nu = true;
 vim.opt.relativenumber = true;
+
+vim.opt.guicursor = ""
+
 vim.opt.scrolloff = 10;
+
 vim.opt.cursorcolumn = false;
+vim.opt.cursorline = true;
+vim.opt.colorcolumn = "0"
+
 
 vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.expandtab = true;
+
+vim.opt.incsearch = true;
 
 vim.opt.termguicolors = true
 
-vim.cmd("colorscheme onedark")
-
-
-local harpoon = require('harpoon')
-harpoon:setup()
-
-vim.keymap.set("n", "<leader>ha", function ()
-	harpoon:list():append()
-end)
-vim.keymap.set("n", "<leader>hl", function ()
-	harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
+vim.cmd("colorscheme nightfox")
