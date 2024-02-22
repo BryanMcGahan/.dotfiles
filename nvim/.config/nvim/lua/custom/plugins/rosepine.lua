@@ -9,6 +9,10 @@ return {
             dark_variant = 'moon',
             dim_inactive_windows = true,
             extend_background_behind_borders = false,
+            styles = {
+                bold = false,
+                italic = false,
+            },
             highlight_groups = {
                 TelescopeBorder = { fg = "highlight_high", bg = "none" },
                 TelescopeNormal = { bg = "none" },

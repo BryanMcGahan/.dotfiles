@@ -21,8 +21,6 @@ vim.keymap.set({ 'n', 'v', 'i', 'o' }, '<F1>', '<cmd><cr>')
 -- vim.opt.nu = true;
 vim.opt.relativenumber = true;
 
-vim.opt.guicursor = ""
-
 vim.opt.scrolloff = 10;
 
 vim.opt.cursorcolumn = false;
@@ -39,4 +37,4 @@ vim.opt.incsearch = true;
 
 vim.opt.termguicolors = true
 
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme rose-pine")
