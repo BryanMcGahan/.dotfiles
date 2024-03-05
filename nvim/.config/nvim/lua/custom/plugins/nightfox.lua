@@ -1,10 +1,14 @@
 return {
-  "EdenEast/nightfox.nvim",
-  config = function ()
-    require('nightfox').setup({
-      options = {
-        dim_inactive = false,
-      }
-    })
-  end
+	"EdenEast/nightfox.nvim",
+	opts = {
+		options = {
+			dim_inactive = true,
+			transparent = false,
+			terminal_colors = true,
+			styles = {
+				comments = "italic",
+				functions = "bold",
+			},
+		},
+	},
 }
