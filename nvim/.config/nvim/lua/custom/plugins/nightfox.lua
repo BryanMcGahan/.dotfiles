@@ -6,8 +6,8 @@ return {
 			transparent = false,
 			terminal_colors = true,
 			styles = {
-				comments = "italic",
-				functions = "bold",
+				comments = "NONE",
+				functions = "NONE",
 			},
 		},
 	},

@@ -26,7 +26,7 @@ config.color_scheme = "nightfox"
 -- config.color_scheme = "nordic"
 -- config.color_scheme = "Tokyo Night Moon"
 
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold" })
 
 local font_size
 local hostname = wezterm.hostname()
