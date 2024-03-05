@@ -2,11 +2,11 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 yabai -m config window_origin_display focus
 
-yabai -m config top_padding 6
-yabai -m config bottom_padding 6
-yabai -m config right_padding 6
-yabai -m config left_padding 6
-yabai -m config window_gap 6
+yabai -m config top_padding 8
+yabai -m config bottom_padding 8
+yabai -m config right_padding 8
+yabai -m config left_padding 8
+yabai -m config window_gap 8
 
 yabai -m config mouse_follows_focus off
 yabai -m config focus_follows_mouse autofocus
@@ -23,5 +23,6 @@ yabai -m rule --add app="^OnyX$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Console$" manage=off
+
 
 
