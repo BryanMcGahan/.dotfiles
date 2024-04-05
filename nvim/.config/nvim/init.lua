@@ -629,7 +629,6 @@ require("lazy").setup({
 			},
 		},
 	},
-
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -789,6 +788,11 @@ require("lazy").setup({
 			})
 			require("mini.pairs").setup()
 			require("mini.indentscope").setup()
+
+			require("mini.starter").setup({
+				autoopen = true,
+				header = "Do or do not, there is no try! \nOnly Syths deal in absolutes!",
+			})
 			-- ... and there is more!
 			--  Check out: https://github.com/echasnovski/mini.nvim
 		end,
