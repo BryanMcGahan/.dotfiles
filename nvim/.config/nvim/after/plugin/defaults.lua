@@ -34,4 +34,4 @@ vim.opt.conceallevel = 1
 -- })
 --
 --
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme tokyonight")

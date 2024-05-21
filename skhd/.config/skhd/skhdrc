@@ -4,7 +4,6 @@ alt - k : yabai -m window --focus north
 alt - h : yabai -m window --focus west
 alt - l : yabai -m window --focus east
 
-
 # Change between displays
 #alt - w: yabai -m display --focus west
 #alt - e: yabai -m display --focus east
@@ -23,12 +22,6 @@ shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north 
 shift + alt - h : yabai -m window --swap west 
 shift + alt - l : yabai -m window --swap east 
-
-
-ctrl + alt - j : yabai -m window --warp south 
-ctrl + alt - k : yabai -m window --warp north 
-ctrl + alt - h : yabai -m window --warp west 
-ctrl + alt - l : yabai -m window --warp east 
 
 
 # shift + alt - n : yabai -m window --display west; yabai -m display --focus west;

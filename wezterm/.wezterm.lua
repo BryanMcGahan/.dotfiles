@@ -26,8 +26,8 @@ end
 -- config.color_scheme = "rose-pine"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "nightfox"
-config.color_scheme = "nightfox"
--- config.color_scheme = "Tokyo Night Storm"
+-- config.color_scheme = "nightfox"
+config.color_scheme = "tokyonight_night"
 -- config.color_scheme = "nordic"
 -- end
 -- if mode == "Light" then
@@ -41,24 +41,21 @@ config.color_scheme = "nightfox"
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold" })
 
 local font_size
-local hostname = wezterm.hostname()
-if hostname == "GigaLaptop.home" or hostname == "GigaLaptop.local" then
-	font_size = 14
-else
-	font_size = 12
-end
 
-config.font_size = font_size
+config.font_size = 14
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
--- config.window_background_image = "/Users/bmcgahan/Pictures/appa.jpg"
--- config.window_background_image_hsb = {
--- 	brightness = 0.5,
--- }
 
--- config.window_background_opacity = 0.95
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 75
+config.window_padding = {
+	left = 12,
+	right = 12,
+	top = 12,
+	bottom = 12,
+}
 
 -- and finally, return the configuration to wezterm
 return config
