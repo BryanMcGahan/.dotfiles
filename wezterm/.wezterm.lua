@@ -26,8 +26,8 @@ end
 -- config.color_scheme = "rose-pine"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "nightfox"
--- config.color_scheme = "nightfox"
-config.color_scheme = "tokyonight_night"
+config.color_scheme = "nightfox"
+-- config.color_scheme = "tokyonight_night"
 -- config.color_scheme = "nordic"
 -- end
 -- if mode == "Light" then
@@ -42,7 +42,6 @@ config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold" })
 
 local font_size
 
-config.font_size = 14
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true

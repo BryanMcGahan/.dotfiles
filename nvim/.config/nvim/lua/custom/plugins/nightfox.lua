@@ -3,7 +3,7 @@ return {
 	opts = {
 		options = {
 			dim_inactive = true,
-			transparent = false,
+			transparent = true,
 			terminal_colors = true,
 			styles = {
 				comments = "NONE",
