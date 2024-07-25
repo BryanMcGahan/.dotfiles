@@ -12,6 +12,8 @@ PATH=${PATH}:$HOME/.bin
 alias ls="eza --icons=always"
 alias cat="bat"
 alias cd="z"
+alias air="~/go/bin/air"
+alias templ="~/go/bin/templ"
 
 export EDITOR=nvim
 

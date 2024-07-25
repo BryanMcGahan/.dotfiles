@@ -2,7 +2,7 @@ vim.keymap.set("n", "<leader>ut", "<cmd>UndotreeToggle<cr>")
 vim.keymap.set("n", "<leader>o", "<cmd>Oil<cr>")
 
 vim.keymap.set("n", "<F12>", "<cmd>silent !tmux neww tmx<cr>")
-vim.keymap.set("n", "<leader>db", "<cmd>bd<cr>")
+vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>")
 
 vim.keymap.set("n", "<leader>pb", "<cmd>bp<cr>")
 vim.keymap.set("n", "<leader>nb", "<cmd>bn<cr>")
@@ -21,17 +21,4 @@ vim.opt.expandtab = true
 
 vim.opt.conceallevel = 1
 
--- require("auto-dark-mode").setup({
--- 	update_interval = 1000,
--- 	set_dark_mode = function()
--- 		vim.api.nvim_set_option("background", "dark")
--- 		vim.cmd("colorscheme nordfox")
--- 	end,
--- 	set_light_mode = function()
--- 		vim.api.nvim_set_option("background", "light")
--- 		vim.cmd("colorscheme dayfox")
--- 	end,
--- })
---
---
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme rose-pine")

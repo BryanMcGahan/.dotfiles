@@ -296,11 +296,12 @@ require("lazy").setup({
 				-- You can put your default mappings / updates / etc. in here
 				--  All the info you're looking for is in `:help telescope.setup()`
 				--
-				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
-				-- },
+				defaults = {
+					--   mappings = {
+					--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+					--   },
+					file_ignore_patterns = { "^.git/", "^node_modules/", "^dist/" },
+				},
 				-- pickers = {}
 				extensions = {
 					["ui-select"] = {
@@ -606,6 +607,7 @@ require("lazy").setup({
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
 				javascript = { { "prettierd", "prettier" } },
+				astro = { { "prettierd", "prettier" } },
 			},
 		},
 	},
@@ -757,6 +759,8 @@ require("lazy").setup({
 			--  - yinq - [Y]ank [I]nside [N]ext [']quote
 			--  - ci'  - [C]hange [I]nside [']quote
 			require("mini.ai").setup({ n_lines = 500 })
+			require("mini.tabline").setup()
+			require("mini.indentscope").setup()
 
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)
 			--
