@@ -21,4 +21,4 @@ vim.opt.expandtab = true
 
 vim.opt.conceallevel = 1
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme nightfox")

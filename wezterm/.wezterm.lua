@@ -28,17 +28,18 @@ end
 -- config.color_scheme = "Bamboo"
 -- config.color_scheme = "rose-pine"
 -- config.color_scheme = "Kanagawa (Gogh)"
--- config.color_scheme = "nightfox"
+config.color_scheme = "nightfox"
 -- config.color_scheme = "carbonfox"
 -- config.color_scheme = "Ayu Mirage"
 -- config.color_scheme = "tokyonight_night"
--- config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tokyo Night Storm"
 -- config.color_scheme = "nordic"
 -- end
-if mode == "Light" then
-	config.color_scheme = "rose-pine-dawn"
-end
-config.color_scheme = "rose-pine-moon"
+-- if mode == "Light" then
+-- 	config.color_scheme = "rose-pine-dawn"
+-- end
+-- config.color_scheme = "rose-pine-moon"
+-- config.color_scheme = "iceberg-dark"
 -- config.color_scheme = "Everforest Dark Medium (Gogh)"
 -- config.color_scheme = "Everforest Dark (Gogh)"
 -- config.color_scheme = "One Dark (Gogh)"
@@ -49,6 +50,7 @@ config.font_size = 14
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
+config.tab_bar_at_bottom = true
 config.window_decorations = "RESIZE"
 
 config.window_background_opacity = 0.90
