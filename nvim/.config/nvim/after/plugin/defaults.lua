@@ -1,5 +1,7 @@
 vim.keymap.set("n", "<leader>ut", "<cmd>UndotreeToggle<cr>")
-vim.keymap.set("n", "<leader>o", "<cmd>Oil<cr>")
+vim.keymap.set("n", "<leader>o", "<cmd>:lua require('oil').toggle_float()<cr>")
+-- vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeToggle<cr>")
+-- vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFocus<cr>")
 
 vim.keymap.set("n", "<F12>", "<cmd>silent !tmux neww tmx<cr>")
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>")
@@ -21,4 +23,4 @@ vim.opt.expandtab = true
 
 vim.opt.conceallevel = 1
 
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme tokyonight")

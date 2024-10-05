@@ -8,7 +8,8 @@ return {
 			dark = "wave",
 			light = "lotus",
 		},
-		commentStyle = { italic = false },
+		transparent = true,
+		commentStyle = { italic = true },
 		keywordStyle = { italic = false },
 		statementStyle = { bold = false },
 		colors = {

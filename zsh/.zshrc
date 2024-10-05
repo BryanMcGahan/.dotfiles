@@ -8,6 +8,7 @@ fi
 eval "$(zoxide init zsh)"
 
 PATH=${PATH}:$HOME/.bin
+PATH=${PATH}:$HOME/go/bin
 
 alias ls="eza --icons=always"
 alias cat="bat"
@@ -30,3 +31,4 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 export GOBIN=${GOBIN:-$(go env GOPATH)/bin}
 
+ eval $(thefuck --alias)

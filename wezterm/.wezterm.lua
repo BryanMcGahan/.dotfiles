@@ -4,47 +4,27 @@ local wezterm = require("wezterm")
 -- This table will hold the configuration.
 local config = {}
 
-local mode = wezterm.gui.get_appearance()
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
--- config.color_scheme = "Bamboo"
--- config.color_scheme = "Catppuccin Mocha"
--- config.color_scheme = "nord"
--- config.color_scheme = "Gruvbox dark, medium (base16)"
--- config.color_scheme = "Hybrid (Gogh)"
--- config.color_scheme = "catppuccin-frappe"
--- config.color_scheme = 'One Dark (Gogh)'
--- config.color_scheme = 'Moonfly (Gogh)'
--- config.color_scheme = "duskfox"
--- config.color_scheme = "nordfox"
--- config.color_scheme = "terafox"
--- config.color_scheme = "dawnfox"
--- config.color_scheme = 'Flexoki (Dark)'
--- config.color_scheme = 'OneDark (base16)'
--- if mode == "Dark" then
--- config.color_scheme = "Bamboo"
--- config.color_scheme = "rose-pine"
--- config.color_scheme = "Kanagawa (Gogh)"
-config.color_scheme = "nightfox"
--- config.color_scheme = "carbonfox"
--- config.color_scheme = "Ayu Mirage"
--- config.color_scheme = "tokyonight_night"
--- config.color_scheme = "Tokyo Night Storm"
--- config.color_scheme = "nordic"
--- end
--- if mode == "Light" then
--- 	config.color_scheme = "rose-pine-dawn"
--- end
--- config.color_scheme = "rose-pine-moon"
--- config.color_scheme = "iceberg-dark"
--- config.color_scheme = "Everforest Dark Medium (Gogh)"
--- config.color_scheme = "Everforest Dark (Gogh)"
--- config.color_scheme = "One Dark (Gogh)"
 
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold" })
+wezterm.on("update-right-status", function(window, pane)
+	window:set_right_status(window:active_workspace())
+end)
+
+-- config.color_scheme = "flexoki-dark"
+-- config.color_scheme = "rose-pine"
+-- config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "iceberg-dark"
+config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "nightfox"
+-- config.color_scheme = "OneDark (Gogh)"
+-- config.color_scheme = "Kanagawa (Gogh)"
+-- config.color_scheme = "dragon"
+
+config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = 550 })
 
 config.font_size = 14
 config.enable_tab_bar = true
@@ -53,14 +33,56 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.window_decorations = "RESIZE"
 
-config.window_background_opacity = 0.90
-config.macos_window_background_blur = 95
-config.window_padding = {
-	left = 12,
-	right = 12,
-	top = 12,
-	bottom = 12,
-}
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 75
+config.window_close_confirmation = "NeverPrompt"
 
 -- and finally, return the configuration to wezterm
+config.cursor_blink_ease_out = "Linear"
+
+config.scrollback_lines = 10000
+
+config.keys = {
+	{
+		key = "|",
+		mods = "SUPER|SHIFT",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "-",
+		mods = "SUPER|SHIFT",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "l",
+		mods = "SUPER|SHIFT",
+		action = wezterm.action.ShowLauncherArgs({
+			flags = "FUZZY|WORKSPACES",
+		}),
+	},
+	{
+		key = "s",
+		mods = "SUPER|SHIFT",
+		action = wezterm.action.PromptInputLine({
+			description = wezterm.format({
+				{ Attribute = { Intensity = "Bold" } },
+				{ Foreground = { AnsiColor = "Fuchsia" } },
+				{ Text = "Enter name for new workspace" },
+			}),
+			action = wezterm.action_callback(function(window, pane, line)
+				-- line will be `nil` if they hit escape without entering anything
+				-- An empty string if they just hit enter
+				-- Or the actual line of text they wrote
+				if line then
+					window:perform_action(
+						wezterm.action.SwitchToWorkspace({
+							name = line,
+						}),
+						pane
+					)
+				end
+			end),
+		}),
+	},
+}
 return config
