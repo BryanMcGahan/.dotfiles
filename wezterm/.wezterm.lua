@@ -18,11 +18,12 @@ end)
 -- config.color_scheme = "rose-pine"
 -- config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "iceberg-dark"
-config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tokyo Night"
 -- config.color_scheme = "nightfox"
 -- config.color_scheme = "OneDark (Gogh)"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "dragon"
+config.color_scheme = "Gruvbox dark, medium (base16)"
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = 550 })
 
