@@ -658,7 +658,7 @@
         "options": {
           "full_name": "obsidian",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }
@@ -668,7 +668,7 @@
         "options": {
           "full_name": "surfshark",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }
@@ -678,7 +678,7 @@
         "options": {
           "full_name": "microsoft-teams",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }
@@ -688,7 +688,7 @@
         "options": {
           "full_name": "microsoft-outlook",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }
@@ -698,7 +698,7 @@
         "options": {
           "full_name": "hiddenbar",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }
@@ -708,7 +708,7 @@
         "options": {
           "full_name": "arc",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }
@@ -718,7 +718,7 @@
         "options": {
           "full_name": "visual-studio-code",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }
@@ -728,7 +728,7 @@
         "options": {
           "full_name": "wezterm",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }
@@ -738,7 +738,7 @@
         "options": {
           "full_name": "rectangle",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }
@@ -748,7 +748,7 @@
         "options": {
           "full_name": "font-jetbrains-mono-nerd-font",
           "args": {
-            "appdir": "~/Applications",
+            "appdir": "/Applications",
             "require_sha": true
           }
         }

@@ -1,4 +1,4 @@
-cask_args appdir: "~/Applications", require_sha: true
+cask_args appdir: "/Applications", require_sha: true
 
 brew "mas" if OS.mac?
 brew "neovim"
@@ -21,7 +21,6 @@ cask "surfshark"
 cask "microsoft-teams"
 cask "microsoft-outlook"
 cask "hiddenbar"
-cask "arc"
 cask "surfshark"
 cask "visual-studio-code"
 cask "wezterm"
