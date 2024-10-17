@@ -88,7 +88,7 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
@@ -296,10 +296,10 @@ require("lazy").setup({
 				--  All the info you're looking for is in `:help telescope.setup()`
 				--
 				defaults = {
-					--   mappings = {
-					--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-					--   },
-					file_ignore_patterns = { "^.git/", "^node_modules/", "^dist/" },
+					mappings = {
+						i = { ["<c-enter>"] = "to_fuzzy_refine" },
+					},
+					file_ignore_patterns = { "^.git/", "^node_modules/", "^dist/", "^bin/" },
 				},
 				-- pickers = {}
 				extensions = {
@@ -529,15 +529,9 @@ require("lazy").setup({
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				-- clangd = {},
-				-- gopls = {},
+				gopls = {},
 				-- pyright = {},
 				-- rust_analyzer = {},
-				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-				--
-				-- Some languages (like typescript) have entire language plugins that can be useful:
-				--    https://github.com/pmizio/typescript-tools.nvim
-				--
-				-- But for many setups, the LSP (`tsserver`) will work just fine
 				-- tsserver = {},
 				--
 				--
@@ -591,16 +585,7 @@ require("lazy").setup({
 	{ -- Autoformat
 		"stevearc/conform.nvim",
 		lazy = false,
-		keys = {
-			{
-				"<leader>fb",
-				function()
-					require("conform").format({ async = true, lsp_fallback = true })
-				end,
-				mode = "",
-				desc = "[F]ormat buffer",
-			},
-		},
+		keys = {},
 		opts = {
 			notify_on_error = false,
 			format_on_save = function(bufnr)
@@ -745,49 +730,6 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = { signs = false },
 	},
-
-	-- { -- Collection of various small independent plugins/modules
-	-- 	"echasnovski/mini.nvim",
-	-- 	config = function()
-	-- 		-- Better Around/Inside textobjects
-	-- 		--
-	-- 		-- Examples:
-	-- 		--  - va)  - [V]isually select [A]round [)]paren
-	-- 		--  - yinq - [Y]ank [I]nside [N]ext [']quote
-	-- 		--  - ci'  - [C]hange [I]nside [']quote
-	-- 		-- require("mini.ai").setup({ n_lines = 500 })
-	-- 		-- require("mini.tabline").setup()
-	-- 		require("mini.indentscope").setup()
-	-- 		-- require("mini.files").setup()
-	-- 		-- require("mini.starter").setup()
-	-- 		-- require("mini.notify").setup()
-	--
-	-- 		-- Add/delete/replace surroundings (brackets, quotes, etc.)
-	-- 		--
-	-- 		-- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-	-- 		-- - sd'   - [S]urround [D]elete [']quotes
-	-- 		-- - sr)'  - [S]urround [R]eplace [)] [']
-	-- 		require("mini.surround").setup()
-	--
-	-- 		-- Simple and easy statusline.
-	-- 		--  You could remove this setup call if you don't like it,
-	-- 		--  and try some other statusline plugin
-	-- 		-- local statusline = require("mini.statusline")
-	-- 		-- -- set use_icons to true if you have a Nerd Font
-	-- 		-- statusline.setup({ use_icons = vim.g.have_nerd_font })
-	-- 		--
-	-- 		-- -- You can configure sections in the statusline by overriding their
-	-- 		-- -- default behavior. For example, here we set the section for
-	-- 		-- -- cursor location to LINE:COLUMN
-	-- 		-- ---@diagnostic disable-next-line: duplicate-set-field
-	-- 		-- statusline.section_location = function()
-	-- 		-- 	return "%2l:%-2v"
-	-- 		-- end
-	--
-	-- 		-- ... and there is more!
-	-- 		--  Check out: https://github.com/echasnovski/mini.nvim
-	-- 	end,
-	-- },
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -811,37 +753,8 @@ require("lazy").setup({
 			require("nvim-treesitter.install").prefer_git = true
 			---@diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup(opts)
-
-			-- There are additional nvim-treesitter modules that you can use to interact
-			-- with nvim-treesitter. You should go explore a few and see what interests you:
-			--
-			--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-			--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 		end,
 	},
-
-	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
-	-- init.lua. If you want these files, they are in the repository, so you can just download them and
-	-- place them in the correct locations.
-
-	-- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for Kickstart
-	--
-	--  Here are some example plugins that I've included in the Kickstart repository.
-	--  Uncomment any of the lines below to enable them (you will need to restart nvim).
-	--
-	-- require 'kickstart.plugins.debug',
-	-- require 'kickstart.plugins.indent_line',
-	-- require 'kickstart.plugins.lint',
-	-- require 'kickstart.plugins.autopairs',
-	-- require 'kickstart.plugins.neo-tree',
-	-- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-
-	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-	--    This is the easiest way to modularize your config.
-	--
-	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	{ import = "custom.plugins" },
 }, {
 	ui = {

@@ -15,7 +15,7 @@ wezterm.on("update-right-status", function(window, pane)
 end)
 
 -- config.color_scheme = "flexoki-dark"
--- config.color_scheme = "rose-pine"
+config.color_scheme = "rose-pine"
 -- config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "iceberg-dark"
 -- config.color_scheme = "Tokyo Night"
@@ -23,7 +23,7 @@ end)
 -- config.color_scheme = "OneDark (Gogh)"
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "dragon"
-config.color_scheme = "Gruvbox dark, medium (base16)"
+-- config.color_scheme = "Gruvbox dark, medium (base16)"
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = 550 })
 
@@ -34,8 +34,8 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.window_decorations = "RESIZE"
 
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 75
+config.window_background_opacity = 0.95
+config.macos_window_background_blur = 55
 config.window_close_confirmation = "NeverPrompt"
 
 -- and finally, return the configuration to wezterm

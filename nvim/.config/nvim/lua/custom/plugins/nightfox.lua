@@ -6,7 +6,7 @@ return {
 			transparent = true,
 			terminal_colors = true,
 			styles = {
-				comments = "NONE",
+				comments = "italic",
 				functions = "NONE",
 			},
 		},
