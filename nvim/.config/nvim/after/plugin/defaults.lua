@@ -1,9 +1,9 @@
 vim.keymap.set("n", "<leader>ut", "<cmd>UndotreeToggle<cr>")
-vim.keymap.set("n", "<leader>f", "<cmd>:Oil<cr>")
-vim.keymap.set("n", "<leader>v", "<cmd>:vsplit<cr>")
-vim.keymap.set("n", "<leader>h", "<cmd>:split<cr>")
+vim.keymap.set("n", "<leader>pf", "<cmd>:Oil<cr>")
+vim.keymap.set("n", "<leader>|", "<cmd>:vsplit<cr>")
+vim.keymap.set("n", "<leader>-", "<cmd>:split<cr>")
 
-vim.keymap.set("n", "<c-t>", "<cmd>silent !tmux neww tmx<cr>")
+vim.keymap.set("n", "<F12>", "<cmd>silent !tmux neww tmx<cr>")
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>")
 
 vim.keymap.set("n", "<leader>pb", "<cmd>bp<cr>")

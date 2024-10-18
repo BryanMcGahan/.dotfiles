@@ -607,7 +607,8 @@ require("lazy").setup({
 				-- is found.
 				javascript = { { "prettierd", "prettier" } },
 				astro = { { "prettierd", "prettier" } },
-				pug = { "prettierd" },
+				pug = { "prettier" },
+				html = { "prettier" },
 			},
 		},
 	},

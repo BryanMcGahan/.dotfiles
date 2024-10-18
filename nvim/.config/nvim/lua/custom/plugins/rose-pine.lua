@@ -25,7 +25,6 @@ return {
 				TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
 				CurSearch = { fg = "none", bg = "leaf", inherit = false },
 				Search = { fg = "text", bg = "leaf", blend = 20, inherit = false },
-				Comment = { fg = "sbtle" },
 			},
 		})
 	end,
