@@ -4,7 +4,7 @@ return {
 	opts = function()
 		require("null-ls").setup({
 			sources = {
-				require("null-ls").builtins.formatting.prettier,
+				require("null-ls").builtins.formatting.prettierd,
 			},
 		})
 	end,

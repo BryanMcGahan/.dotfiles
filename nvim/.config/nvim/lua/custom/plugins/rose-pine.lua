@@ -4,11 +4,11 @@ return {
 		require("rose-pine").setup({
 			variant = "auto",
 			dark_variant = "main",
-			dim_inactive_windows = false,
-			extend_background_behind_borders = false,
+			dim_inactive_windows = true,
+			extend_background_behind_borders = true,
 			styles = {
-				transparency = true,
-				bold = true,
+				transparency = false,
+				bold = false,
 				italic = false,
 			},
 			enable = {
@@ -17,12 +17,18 @@ return {
 				migrations = true,
 			},
 			highlight_groups = {
-				TelescopeBorder = { fg = "highlight_high", bg = "none" },
-				TelescopeNormal = { bg = "none" },
-				TelescopePromptNormal = { bg = "none" },
-				TelescopeResultsNormal = { fg = "subtle", bg = "none" },
-				TelescopeSelection = { fg = "text", bg = "none" },
-				TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
+				TelescopeBorder = { fg = "overlay", bg = "overlay" },
+				TelescopeNormal = { fg = "subtle", bg = "overlay" },
+				TelescopeSelection = { fg = "text", bg = "highlight_med" },
+				TelescopeSelectionCaret = { fg = "love", bg = "highlight_med" },
+				TelescopeMultiSelection = { fg = "text", bg = "highlight_high" },
+
+				TelescopeTitle = { fg = "base", bg = "love" },
+				TelescopePromptTitle = { fg = "base", bg = "pine" },
+				TelescopePreviewTitle = { fg = "base", bg = "iris" },
+
+				TelescopePromptNormal = { fg = "text", bg = "surface" },
+				TelescopePromptBorder = { fg = "surface", bg = "surface" },
 				CurSearch = { fg = "none", bg = "leaf", inherit = false },
 				Search = { fg = "text", bg = "leaf", blend = 20, inherit = false },
 			},

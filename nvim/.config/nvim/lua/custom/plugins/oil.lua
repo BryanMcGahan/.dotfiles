@@ -20,7 +20,10 @@ return {
 		},
 		float = {
 			padding = 2,
-			preview_split = "below",
+			preview_split = "auto",
+			win_options = {
+				winblend = 2,
+			},
 		},
 		keymaps = {
 			["g?"] = "actions.show_help",
@@ -32,7 +35,7 @@ return {
 				desc = "Open the entry in a horizontal split",
 			},
 			["<C-p>"] = "actions.preview",
-			["<leader>f"] = "actions.close",
+			["<leader>pf"] = "actions.close",
 			["<C-l>"] = "actions.refresh",
 			["-"] = "actions.parent",
 			["_"] = "actions.open_cwd",
@@ -43,8 +46,8 @@ return {
 			["g."] = "actions.toggle_hidden",
 		},
 		use_default_keymaps = false,
-		win_options = {
-			winbar = "%!v:lua.get_oil_winbar()",
+		view_options = {
+			show_hidden = true,
 		},
 	},
 	-- Optional dependencies

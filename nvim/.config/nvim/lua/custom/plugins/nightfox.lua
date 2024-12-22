@@ -3,11 +3,11 @@ return {
 	opts = {
 		options = {
 			dim_inactive = false,
-			transparent = true,
+			transparent = false,
 			terminal_colors = true,
 			styles = {
 				comments = "italic",
-				functions = "NONE",
+				functions = "bold",
 			},
 		},
 	},
