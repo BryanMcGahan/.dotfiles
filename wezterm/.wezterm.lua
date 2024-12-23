@@ -11,15 +11,16 @@ if wezterm.config_builder then
 end
 
 -- config.color_scheme = "rose-pine-moon"
--- config.color_scheme = "rose-pine"
+config.color_scheme = "rose-pine"
 -- config.color_scheme = 'flexoki-dark'
 -- config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "iceberg-dark"
-config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tokyo Night"
 -- config.color_scheme = "One Dark (Gogh)"
 -- config.color_scheme = 'OneDark (base16)'
 -- config.color_scheme = 'OneHalfDark'
 -- config.color_scheme = "nightfox"
+-- config.color_scheme = "terafox"
 -- config.color_scheme = "duskfox"
 -- config.color_scheme = "carbonfox"
 -- config.color_scheme = "Kanagawa (Gogh)"

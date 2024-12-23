@@ -2,7 +2,7 @@ return {
 	"EdenEast/nightfox.nvim",
 	opts = {
 		options = {
-			dim_inactive = false,
+			dim_inactive = true,
 			transparent = false,
 			terminal_colors = true,
 			styles = {
