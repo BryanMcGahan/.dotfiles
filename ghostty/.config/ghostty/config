@@ -1,0 +1,24 @@
+font-family = "Hack Nerd Font Mono"
+font-family = "JetBrainsMono Nerd Font Mono"
+
+font-style=Bold
+
+
+macos-titlebar-style = transparent
+macos-option-as-alt = true
+
+font-feature=-liga
+
+################################################
+theme = Kanagawa Dragon
+# theme = rose-pine-moon
+# theme = tokyonight-storm
+# theme = terafox
+# theme = GruvboxDarkHard
+
+################################################
+# keybinds
+keybind=shift+ctrl+r=reload_config
+keybind=shift+ctrl+super+t=toggle_quick_terminal
+
+

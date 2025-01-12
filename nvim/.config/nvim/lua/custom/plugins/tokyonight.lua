@@ -8,7 +8,7 @@ return { -- You can easily change to a different colorscheme.
 	priority = 1000, -- make sure to load this before all the other start plugins
 	config = function()
 		require("tokyonight").setup({
-			style = "night",
+			style = "storm",
 			light_style = "day",
 			transparent = false,
 			styles = {
@@ -17,10 +17,10 @@ return { -- You can easily change to a different colorscheme.
 				comments = { italic = true },
 				keywords = { italic = false, bold = false },
 				functions = {
-					bold = true,
+					bold = false,
 				},
 				-- Background styles. Can be "dark", "transparent" or "normal"
-				floats = "normal", -- style for floating windows
+				floats = "dark", -- style for floating windows
 			},
 			dim_inactive = false,
 			lualine_bold = true,

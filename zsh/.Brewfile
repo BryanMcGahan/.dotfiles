@@ -18,13 +18,12 @@ brew "thefuck"
 brew "tldr"
 brew "just"
 brew "tree"
-brew "loop"
+brew "ghostty"
 
 
 cask "obsidian"
 cask "surfshark"
 cask "hiddenbar"
-cask "wezterm"
 cask "font-jetbrains-mono-nerd-font"
 
 mas "Windows App", id:1295203466 if OS.mac?

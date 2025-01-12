@@ -1,15 +1,8 @@
--- LSP servers and clients communicate what features they support through "capabilities".
---  By default, Neovim support a subset of the LSP specification.
---  With blink.cmp, Neovim has *more* capabilities which are communicated to the LSP servers.
---  Explanation from TJ: https://youtu.be/m8C0Cq9Uv9o?t=1275
---
--- This can vary by config, but in-general for nvim-lspconfig:
 return {
 	-- Main LSP Configuration
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		-- Automatically install LSPs and related tools to stdpath for Neovim
-		"saghen/blink.cmp",
 		{ "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -19,13 +12,38 @@ return {
 		-- { "j-hui/fidget.nvim", opts = {} },
 
 		-- Allows extra capabilities provided by nvim-cmp
-		-- "hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-nvim-lsp",
 	},
-
 	config = function()
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
-		require("lspconfig").lua_ls.setup({ capabilities = capabilities })
+		-- Brief aside: **What is LSP?**
+		--
+		-- LSP is an initialism you've probably heard, but might not understand what it is.
+		--
+		-- LSP stands for Language Server Protocol. It's a protocol that helps editors
+		-- and language tooling communicate in a standardized fashion.
+		--
+		-- In general, you have a "server" which is some tool built to understand a particular
+		-- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
+		-- (sometimes called LSP servers, but that's kind of like ATM Machine) are standalone
+		-- processes that communicate with some "client" - in this case, Neovim!
+		--
+		-- LSP provides Neovim with features like:
+		--  - Go to definition
+		--  - Find references
+		--  - Autocompletion
+		--  - Symbol Search
+		--  - and more!
+		--
+		-- Thus, Language Servers are external tools that must be installed separately from
+		-- Neovim. This is where `mason` and related plugins come into play.
+		--
+		-- If you're wondering about lsp vs treesitter, you can check out the wonderfully
+		-- and elegantly composed help section, `:help lsp-vs-treesitter`
 
+		--  This function gets run when an LSP attaches to a particular buffer.
+		--    That is to say, every time a new file is opened that is associated with
+		--    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
+		--    function will be executed to configure the current buffer
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 			callback = function(event)
@@ -117,12 +135,22 @@ return {
 			end,
 		})
 
+		-- Change diagnostic symbols in the sign column (gutter)
+		-- if vim.g.have_nerd_font then
+		--   local signs = { ERROR = '', WARN = '', INFO = '', HINT = '' }
+		--   local diagnostic_signs = {}
+		--   for type, icon in pairs(signs) do
+		--     diagnostic_signs[vim.diagnostic.severity[type]] = icon
+		--   end
+		--   vim.diagnostic.config { signs = { text = diagnostic_signs } }
+		-- end
+
 		-- LSP servers and clients are able to communicate to each other what features they support.
 		--  By default, Neovim doesn't support everything that is in the LSP specification.
 		--  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
 		--  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
-		-- local capabilities = vim.lsp.protocol.make_client_capabilities()
-		-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 		-- Enable the following language servers
 		--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -145,25 +173,11 @@ return {
 			--
 			-- But for many setups, the LSP (`ts_ls`) will work just fine
 			-- ts_ls = {},
-			emmet_language_server = {
-				filetypes = {
-					"templ",
-					"html",
-				},
-			},
-			kotlin_language_server = {
-				filetypes = {
-					"kotlin",
-				},
-			},
-			gradle_ls = {
-				filetypes = {
-					"kotlin",
-				},
-			},
+			--
+
 			lua_ls = {
-				-- cmd = {...},
-				-- filetypes = { ...},
+				-- cmd = { ... },
+				-- filetypes = { ... },
 				-- capabilities = {},
 				settings = {
 					Lua = {

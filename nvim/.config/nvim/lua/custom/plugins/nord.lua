@@ -4,6 +4,6 @@ return {
 	priority = 1000,
 	config = function()
 		require("nord").setup({})
-		vim.cmd.colorscheme("nord")
+		-- vim.cmd.colorscheme("nord")
 	end,
 }
