@@ -1,21 +1,25 @@
 font-family = "Hack Nerd Font Mono"
-font-family = "JetBrainsMono Nerd Font Mono"
-
-font-style=Bold
+font-feature=-liga
 
 
 macos-titlebar-style = transparent
 macos-option-as-alt = true
 
-font-feature=-liga
+title = "BWMMWB"
+
 
 ################################################
-theme = Kanagawa Dragon
+# theme = Kanagawa Dragon
+# theme = Kanagawa Wave
+# theme = catppuccin-mocha
 # theme = rose-pine-moon
-# theme = tokyonight-storm
+# theme = rose-pine
+# theme = tokyonight
 # theme = terafox
+# theme = nightfox
 # theme = GruvboxDarkHard
-
+# theme = OneHalfDark
+theme = gruvbox-material
 ################################################
 # keybinds
 keybind=shift+ctrl+r=reload_config

@@ -1,13 +1,3 @@
-function _G.get_oil_winbar()
-	local dir = require("oil").get_current_dir()
-	if dir then
-		return vim.fn.fnamemodify(dir, ":~")
-	else
-		-- If there is no current directory (e.g. over ssh), just show the buffer name
-		return vim.api.nvim_buf_get_name(0)
-	end
-end
-
 return {
 	"stevearc/oil.nvim",
 	opts = {
@@ -15,14 +5,14 @@ return {
 		skip_confirm_for_simple_edits = true,
 		columns = {
 			"icon",
-			"size",
-			"mtime",
+			-- "size",
+			-- "mtime",
 		},
 		float = {
-			padding = 2,
+			padding = 4,
 			preview_split = "auto",
 			win_options = {
-				winblend = 2,
+				winblend = 0,
 			},
 		},
 		keymaps = {
@@ -44,6 +34,17 @@ return {
 			["gs"] = "actions.change_sort",
 			["gx"] = "actions.open_external",
 			["g."] = "actions.toggle_hidden",
+			["gd"] = {
+				desc = "Toggle file detail view",
+				callback = function()
+					detail = not detail
+					if detail then
+						require("oil").set_columns({ "icon", "permissions", "size", "mtime" })
+					else
+						require("oil").set_columns({ "icon" })
+					end
+				end,
+			},
 		},
 		use_default_keymaps = false,
 		view_options = {
@@ -51,5 +52,5 @@ return {
 		},
 	},
 	-- Optional dependencies
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = { "echasnovski/mini.icons" },
 }

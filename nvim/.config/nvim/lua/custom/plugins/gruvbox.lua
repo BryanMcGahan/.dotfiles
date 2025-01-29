@@ -1,7 +1,9 @@
 return {
-	"morhetz/gruvbox",
-	config = function()
-        vim.g.gruvbox_contrast_dark = "hard"
-        vim.g.gruvbox_invert_selection = 0
-	end,
+	"ellisonleao/gruvbox.nvim",
+	priority = 1000,
+	config = true,
+	opts = {
+		contrast = "hard",
+		transparent_mode = true,
+	},
 }

@@ -6,13 +6,14 @@ return {
 		theme = "auto",
 		background = {
 			dark = "dragon",
+			-- dark = "wave",
 			light = "lotus",
 		},
 		undercurl = false,
 		transparent = false,
 		commentStyle = { italic = true },
 		keywordStyle = { italic = false },
-		statementStyle = { bold = false },
+		statementStyle = { bold = false, italic = false },
 		colors = {
 			theme = {
 				all = {

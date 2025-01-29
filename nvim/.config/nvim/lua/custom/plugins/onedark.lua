@@ -1,7 +1,7 @@
 return {
 	"navarasu/onedark.nvim",
 	opts = {
-        style = "dark",
+		style = "dark",
 		lualine = {
 			transparent = true,
 		},

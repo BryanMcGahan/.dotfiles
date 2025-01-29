@@ -8,7 +8,7 @@ return { -- You can easily change to a different colorscheme.
 	priority = 1000, -- make sure to load this before all the other start plugins
 	config = function()
 		require("tokyonight").setup({
-			style = "storm",
+			style = "night",
 			light_style = "day",
 			transparent = false,
 			styles = {
@@ -20,9 +20,9 @@ return { -- You can easily change to a different colorscheme.
 					bold = false,
 				},
 				-- Background styles. Can be "dark", "transparent" or "normal"
-				floats = "dark", -- style for floating windows
+				floats = "normal", -- style for floating windows
 			},
-			dim_inactive = false,
+			dim_inactive = true,
 			lualine_bold = true,
 			on_highlights = function(hl, c)
 				local prompt = "#2d3149"

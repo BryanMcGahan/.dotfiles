@@ -5,16 +5,16 @@ return {
 			variant = "auto",
 			dark_variant = "moon",
 			dim_inactive_windows = true,
-			extend_background_behind_borders = false,
+			extend_background_behind_borders = true,
 			styles = {
 				transparency = false,
-				bold = true,
+				bold = false,
 				italic = false,
 			},
 			enable = {
 				terminal = true,
-				legacy_highlights = true,
-				migrations = true,
+				legacy_highlights = false,
+				migrations = false,
 			},
 			highlight_groups = {
 				TelescopeBorder = { fg = "overlay", bg = "overlay" },
