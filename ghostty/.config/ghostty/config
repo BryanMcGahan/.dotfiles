@@ -2,10 +2,14 @@ font-family = "Hack Nerd Font Mono"
 font-feature=-liga
 
 
-macos-titlebar-style = transparent
+macos-titlebar-style = "hidden"
 macos-option-as-alt = true
 
 title = "BWMMWB"
+
+
+background-opacity=.85
+background-blur-radius=25
 
 
 ################################################
@@ -13,13 +17,17 @@ title = "BWMMWB"
 # theme = Kanagawa Wave
 # theme = catppuccin-mocha
 # theme = rose-pine-moon
-# theme = rose-pine
+theme = rose-pine
 # theme = tokyonight
 # theme = terafox
 # theme = nightfox
 # theme = GruvboxDarkHard
 # theme = OneHalfDark
-theme = gruvbox-material
+# theme = gruvbox-material
+# theme = miasma
+# theme = gruber-darker
+# theme = mellow
+# theme = jellybeans
 ################################################
 # keybinds
 keybind=shift+ctrl+r=reload_config

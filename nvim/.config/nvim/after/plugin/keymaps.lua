@@ -7,7 +7,7 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 vim.keymap.set("n", "<leader>ut", "<cmd>UndotreeToggle<cr>")
-vim.keymap.set("n", "<leader>e", "<cmd>:lua require('oil').toggle_float()<cr>")
+vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>")
 
 vim.keymap.set("n", "<leader>|", "<cmd>:vsplit<cr>")
 vim.keymap.set("n", "<leader>-", "<cmd>:split<cr>")
