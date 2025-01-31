@@ -9,11 +9,10 @@ return {
 			-- "mtime",
 		},
 		float = {
-			padding = 4,
+			padding = 2,
 			preview_split = "auto",
-			win_options = {
-				winblend = 0,
-			},
+			max_height = 0.9,
+			max_width = 0.9,
 		},
 		keymaps = {
 			["g?"] = "actions.show_help",
@@ -25,7 +24,7 @@ return {
 				desc = "Open the entry in a horizontal split",
 			},
 			["<C-p>"] = "actions.preview",
-			["<leader>pf"] = "actions.close",
+			["<leader>e"] = "actions.close",
 			["<C-l>"] = "actions.refresh",
 			["-"] = "actions.parent",
 			["_"] = "actions.open_cwd",

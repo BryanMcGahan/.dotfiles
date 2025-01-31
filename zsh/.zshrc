@@ -1,4 +1,6 @@
 # Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/bwmmwb/.zsh/completions:"* ]]; then export FPATH="/Users/bwmmwb/.zsh/completions:$FPATH"; fi
+# Add deno completions to search path
 if [[ ":$FPATH:" != *":/Users/bmcgahan/.zsh/completions:"* ]]; then export FPATH="/Users/bmcgahan/.zsh/completions:$FPATH"; fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -33,3 +35,7 @@ export PATH=$HOME//opt/homebrew/Cellar/erlang/27.1.2/lib/erlang/erts-15.1.2/bin:
 export PATH=$HOME//opt/homebrew/bin:$PATH
 
 [ -f "/Users/bwmmwb/.ghcup/env" ] && . "/Users/bwmmwb/.ghcup/env" # ghcup-env
+. "/Users/bwmmwb/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit

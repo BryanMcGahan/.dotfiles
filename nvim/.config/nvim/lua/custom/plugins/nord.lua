@@ -1,9 +1,5 @@
 return {
-	"gbprod/nord.nvim",
+	"arcticicestudio/nord-vim",
 	lazy = false,
 	priority = 1000,
-	config = function()
-		require("nord").setup({})
-		-- vim.cmd.colorscheme("nord")
-	end,
 }

@@ -3,7 +3,7 @@ return {
 	config = function()
 		require("rose-pine").setup({
 			variant = "auto",
-			dark_variant = "main",
+			dark_variant = "moon",
 			dim_inactive_windows = false,
 			extend_background_behind_borders = false,
 			styles = {
