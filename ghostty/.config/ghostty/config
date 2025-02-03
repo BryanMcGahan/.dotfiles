@@ -11,8 +11,8 @@ macos-option-as-alt = true
 title = "BWMMWB"
 
 
-#background-opacity=.95
-#background-blur-radius=25
+background-opacity=.85
+background-blur-radius=25
 
 
 ################################################
@@ -26,12 +26,13 @@ title = "BWMMWB"
 # theme = nightfox
 # theme = GruvboxDarkHard
 # theme = OneHalfDark
-theme = gruvbox-material
+# theme = gruvbox-material
 # theme = miasma
 # theme = gruber-darker
 # theme = mellow
 # theme = jellybeans
 # theme = flexoki-dark
+theme = vesper
 ################################################
 # keybinds
 keybind=shift+ctrl+r=reload_config
