@@ -11,3 +11,4 @@
 -- vim.cmd("colorscheme jellybeans")
 -- vim.cmd("colorscheme flexoki-dark")
 vim.cmd("colorscheme vesper")
+-- vim.cmd("colorscheme oxocarbon")
