@@ -36,9 +36,9 @@ return {
                 auto_show_delay_ms = 250
             },
             menu = {
-                -- auto_show = function(ctx) return ctx.mode ~= 'cmdline' end,
                 border = 'single',
                 draw = {
+                    padding = 2,
                     columns = {
                         { "label",     "label_description", gap = 1 },
                         { "kind_icon", "kind",              gap = 1 }
