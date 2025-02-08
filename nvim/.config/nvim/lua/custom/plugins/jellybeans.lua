@@ -1,3 +1,0 @@
-return {
-	"nanotech/jellybeans.vim",
-}

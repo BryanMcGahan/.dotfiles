@@ -1,5 +1,6 @@
 return {
 	"stevearc/oil.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
 		default_file_explorer = true,
 		skip_confirm_for_simple_edits = true,
@@ -50,6 +51,4 @@ return {
 			show_hidden = true,
 		},
 	},
-	-- Optional dependencies
-	dependencies = { "echasnovski/mini.icons" },
 }

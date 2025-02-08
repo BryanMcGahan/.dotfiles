@@ -19,7 +19,7 @@ background-blur-radius=20
 # theme = Kanagawa Dragon
 # theme = Kanagawa Wave
 # theme = catppuccin-mocha
-# theme = rose-pine-moon
+theme = rose-pine-moon
 # theme = rose-pine
 # theme = tokyonight
 # theme = terafox
@@ -33,7 +33,7 @@ background-blur-radius=20
 # theme = jellybeans
 # theme = flexoki-dark
 # theme = Oxocarbon
-theme = vesper
+# theme = vesper
 ################################################
 # keybinds
 keybind=shift+ctrl+r=reload_config

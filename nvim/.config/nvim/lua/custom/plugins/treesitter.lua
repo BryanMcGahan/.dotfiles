@@ -6,7 +6,6 @@ return { -- Highlight, edit, and navigate code
 	opts = {
 		ensure_installed = {
 			"bash",
-			"c",
 			"diff",
 			"html",
 			"lua",
