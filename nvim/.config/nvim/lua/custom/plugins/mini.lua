@@ -20,6 +20,11 @@ return { -- Collection of various small independent plugins/modules
             tabpage_section = "right"
         })
         require("mini.icons").setup()
+        require('mini.bufremove').setup()
+        require('mini.animate').setup()
+        require('mini.notify').setup()
+        require('mini.starter').setup()
+
 
         -- Simple and easy statusline.
         --  You could remove this setup call if you don't like it,

@@ -34,8 +34,8 @@ export GOBIN=${GOBIN:-$(go env GOPATH)/bin}
 export PATH=$HOME//opt/homebrew/Cellar/erlang/27.1.2/lib/erlang/erts-15.1.2/bin:$PATH
 export PATH=$HOME//opt/homebrew/bin:$PATH
 
-[ -f "/Users/bwmmwb/.ghcup/env" ] && . "/Users/bwmmwb/.ghcup/env" # ghcup-env
 . "/Users/bwmmwb/.deno/env"
 # Initialize zsh completions (added by deno install script)
 autoload -Uz compinit
 compinit
+[ -f "/Users/bwmmwb/.ghcup/env" ] && . "/Users/bwmmwb/.ghcup/env" # ghcup-env

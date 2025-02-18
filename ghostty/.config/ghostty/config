@@ -1,6 +1,5 @@
 font-family = "JetBrainsMono Nerd Font"
 font-feature=-liga
-font-size=14
 
 font-style="medium"
 
@@ -11,8 +10,8 @@ macos-option-as-alt = true
 title = "BWMMWB"
 
 
-background-opacity=.85
-background-blur-radius=20
+#background-opacity=.75
+#background-blur-radius=30
 
 
 ################################################
@@ -22,8 +21,9 @@ background-blur-radius=20
 # theme = rose-pine-moon
 # theme = rose-pine
 # theme = tokyonight
-# theme = terafox
+theme = terafox
 # theme = nightfox
+# theme = carbonfox
 # theme = GruvboxDarkHard
 # theme = OneHalfDark
 # theme = gruvbox-material
@@ -33,7 +33,10 @@ background-blur-radius=20
 # theme = jellybeans
 # theme = flexoki-dark
 # theme = Oxocarbon
-theme = vesper
+# theme = vesper
+# theme = zenbones_dark
+# theme = Aura
+# theme = NvimDark
 ################################################
 # keybinds
 keybind=shift+ctrl+r=reload_config

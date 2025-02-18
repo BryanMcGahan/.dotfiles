@@ -172,11 +172,7 @@ if.app-id = 'com.mitchellh.ghostty'
 run = "move-node-to-workspace T"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.Safari'
-run = "move-node-to-workspace B"
-
-[[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
+if.app-id = 'app.zen-browser.zen'
 run = "move-node-to-workspace B"
 
 [[on-window-detected]]
@@ -194,3 +190,11 @@ run = "move-node-to-workspace F"
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
 run = "move-node-to-workspace E"
+
+[workspace-to-monitor-force-assignment]
+T = 'main'
+E = 'main'
+F = 'secondary'
+M = 'secondary'
+N = 'secondary'
+B = 'secondary'

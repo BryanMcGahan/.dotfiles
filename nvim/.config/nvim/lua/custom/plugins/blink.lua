@@ -30,6 +30,7 @@ return {
         },
         signature = { enabled = true, window = { border = 'single' } },
         completion = {
+            accept = { auto_brackets = { enabled = false } },
             documentation = {
                 window = { border = 'single' },
                 auto_show = true,
