@@ -5,12 +5,12 @@ return {
 	opts = {
 		theme = "auto",
 		background = {
-			dark = "dragon",
-			-- dark = "wave",
+			-- dark = "dragon",
+			dark = "wave",
 			light = "lotus",
 		},
 		undercurl = false,
-		transparent = true,
+		transparent = false,
 		commentStyle = { italic = true },
 		keywordStyle = { italic = false },
 		statementStyle = { bold = true, italic = false },
