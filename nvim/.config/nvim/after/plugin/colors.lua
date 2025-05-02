@@ -1,6 +1,6 @@
-vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme github_dark")
--- vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme vesper")
 -- vim.cmd("colorscheme gruvbox-material")
 -- vim.cmd("colorscheme nightfox")

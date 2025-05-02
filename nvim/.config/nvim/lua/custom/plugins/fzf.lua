@@ -6,7 +6,7 @@ return {
 	dependencies = { "echasnovski/mini.icons" },
 	opts = {},
 	config = function()
-		require("fzf-lua").setup({ "borderless" })
+		-- require("fzf-lua").setup({ "borderless" })
 		vim.keymap.set("n", "<leader>ca", "<cmd>FzfLua lsp_code_actions<cr>", { desc = "[C]ode [A]ctions" })
 		vim.keymap.set("n", "<leader>sf", "<cmd>FzfLua files<cr>", { desc = "[S]earch [F]iles" })
 		vim.keymap.set("n", "<leader><leader>", "<cmd>FzfLua buffers<cr>", { desc = "[S]earch [B]uffers" })

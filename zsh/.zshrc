@@ -14,6 +14,7 @@ alias cat="bat"
 alias cd="z"
 alias air="~/go/bin/air"
 alias templ="~/go/bin/templ"
+alias love="/Applications/love.app/Contents/MacOS/love"
 
 export EDITOR=nvim
 
@@ -40,3 +41,12 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/Users/bwmmwb/Library/Application Support/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/bwmmwb/.opam/opam-init/init.zsh' ]] || source '/Users/bwmmwb/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration

@@ -10,8 +10,8 @@ macos-option-as-alt = true
 title = "BWMMWB"
 
 
-#background-opacity=.75
-#background-blur-radius=30
+background-opacity=.90
+background-blur=true
 
 
 ################################################
@@ -19,8 +19,9 @@ title = "BWMMWB"
 # theme = Kanagawa Wave
 # theme = catppuccin-mocha
 # theme = rose-pine-moon
-theme = rose-pine
-# theme = tokyonight
+# theme = dark:rose-pine,light:rose-pine-dawn
+# theme = mellow
+theme = tokyonight
 # theme = terafox
 # theme = nightfox
 # theme = carbonfox
@@ -37,6 +38,9 @@ theme = rose-pine
 # theme = zenbones_dark
 # theme = Aura
 # theme = NvimDark
+# theme = Github Dark
+# theme = duskfox
+# theme = dark:cyberdream,light:cyberdream-light
 ################################################
 # keybinds
 keybind=shift+ctrl+r=reload_config
