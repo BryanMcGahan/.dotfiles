@@ -50,3 +50,10 @@ fi
 # This section can be safely removed at any time if needed.
 [[ ! -r '/Users/bwmmwb/.opam/opam-init/init.zsh' ]] || source '/Users/bwmmwb/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+
+# fnm
+FNM_PATH="/Users/bwmmwb/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/bwmmwb/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi

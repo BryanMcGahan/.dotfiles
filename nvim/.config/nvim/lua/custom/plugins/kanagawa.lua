@@ -10,10 +10,10 @@ return {
 			light = "lotus",
 		},
 		undercurl = false,
-		transparent = false,
+		transparent = true,
 		commentStyle = { italic = true },
 		keywordStyle = { italic = false },
-		statementStyle = { bold = true, italic = false },
+		statementStyle = { bold = false, italic = false },
 		terminalColors = true,
 		colors = {
 			theme = {
