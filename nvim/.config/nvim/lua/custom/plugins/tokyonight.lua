@@ -10,7 +10,7 @@ return { -- You can easily change to a different colorscheme.
 		require("tokyonight").setup({
 			style = "night",
 			light_style = "day",
-			transparent = false,
+			transparent = true,
 			styles = {
 				-- Style to be applied to different syntax groups
 				-- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -20,7 +20,7 @@ return { -- You can easily change to a different colorscheme.
 					bold = false,
 				},
 				-- Background styles. Can be "dark", "transparent" or "normal"
-				floats = "transparent", -- style for floating windows
+				floats = "normal", -- style for floating windows
 			},
 			dim_inactive = true,
 			lualine_bold = true,

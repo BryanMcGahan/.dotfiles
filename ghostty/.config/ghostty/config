@@ -11,7 +11,7 @@ title = "BWMMWB"
 
 
 background-opacity=.90
-background-blur=true
+background-blur=50
 
 
 ################################################

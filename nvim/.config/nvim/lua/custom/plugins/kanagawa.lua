@@ -5,8 +5,7 @@ return {
 	opts = {
 		theme = "auto",
 		background = {
-			dark = "dragon",
-			-- dark = "wave",
+			dark = "wave",
 			light = "lotus",
 		},
 		undercurl = false,
