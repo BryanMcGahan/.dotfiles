@@ -57,3 +57,18 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/Users/bwmmwb/Library/Application Support/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+# fnm
+FNM_PATH="/Users/bwmmwb/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/bwmmwb/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+# pnpm
+export PNPM_HOME="/Users/bwmmwb/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -10,8 +10,8 @@ macos-option-as-alt = true
 title = "BWMMWB"
 
 
-background-opacity=.90
-background-blur=50
+#background-opacity=.90
+#background-blur=50
 
 
 ################################################
@@ -19,9 +19,9 @@ background-blur=50
 # theme = Kanagawa Wave
 # theme = catppuccin-mocha
 # theme = rose-pine-moon
-# theme = dark:rose-pine,light:rose-pine-dawn
+theme = dark:rose-pine,light:rose-pine-dawn
 # theme = mellow
-theme = tokyonight
+# theme = tokyonight
 # theme = terafox
 # theme = nightfox
 # theme = carbonfox
