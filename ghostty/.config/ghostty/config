@@ -16,12 +16,12 @@ title = "BWMMWB"
 
 ################################################
 # theme = Kanagawa Dragon
-# theme = Kanagawa Wave
+theme = Kanagawa Wave
 # theme = catppuccin-mocha
 # theme = rose-pine-moon
 # theme = dark:rose-pine,light:rose-pine-dawn
 # theme = mellow
-theme = tokyonight-storm
+# theme = dark:tokyonight_night,light:tokyonight-day
 # theme = terafox
 # theme = nightfox
 # theme = carbonfox
@@ -41,6 +41,9 @@ theme = tokyonight-storm
 # theme = Github Dark
 # theme = duskfox
 # theme = dark:cyberdream,light:cyberdream-light
+# theme = melange_dark
+# theme = kanso-ink
+# theme = nord
 ################################################
 # keybinds
 keybind=shift+ctrl+r=reload_config
