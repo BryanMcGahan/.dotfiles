@@ -22,13 +22,22 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "gruvbox",
     },
   },
   {
     "snacks.nvim",
     opts = {
-      notifier = { enabled = true },
+      notifier = { enabled = false },
+    },
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      sources = { "filesystem", "buffers", "git_status" },
+      window = {
+        position = "right",
+      },
     },
   },
 }

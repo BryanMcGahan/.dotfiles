@@ -17,7 +17,7 @@ end
 -- config.color_scheme = 'flexoki-dark'
 -- config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "iceberg-dark"
-config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "tokyonight"
 -- config.color_scheme = "One Dark (Gogh)"
 -- config.color_scheme = "OneDark (base16)"
 -- config.color_scheme = 'OneHalfDark'
@@ -29,15 +29,15 @@ config.color_scheme = "Tokyo Night"
 -- config.color_scheme = 'Kanagawa Dragon (Gogh)'
 -- config.color_scheme = "dragon"
 -- config.color_scheme = "Gruvbox dark, hard (base16)"
+config.color_scheme = "GruvboxDarkHard"
 -- config.color_scheme = "Gruvbox Material (Gogh)"
+-- config.color_scheme = "GruvboxDarkHard"
 -- config.color_scheme = "mellow"
 -- config.color_scheme = "Vesper"
 -- config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "ayu"
 -- config.color_scheme = 'Ayu Dark (Gogh)'
 -- config.color_scheme = 'Poimandres'
--- config.color_scheme = 'Gruvbox Material (Gogh)'
--- config.color_scheme = 'Gruvbox dark, hard (base16)'
 -- config.color_scheme = 'nord'
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
