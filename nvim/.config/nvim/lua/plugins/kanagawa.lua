@@ -7,7 +7,7 @@ return {
       commentStyle = { italic = true },
       functionStyle = {},
       keywordStyle = { italic = false },
-      statementStyle = { bold = true },
+      statementStyle = { bold = false },
       typeStyle = {},
       transparent = true, -- do not set background color
       dimInactive = false, -- dim inactive window `:h hl-NormalNC`

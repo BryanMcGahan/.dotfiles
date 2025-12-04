@@ -22,21 +22,41 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "gruvbox-material",
     },
   },
   {
     "snacks.nvim",
     opts = {
-      notifier = { enabled = false },
+      notifier = { enabled = true },
+      words = { enabled = false },
+      picker = {
+        sources = {
+          files = {
+            hidden = true,
+          },
+          explorer = {
+            tree = true,
+            auto_close = true,
+            layout = { layout = { position = "right" } },
+          },
+        },
+      },
     },
   },
   {
-    "nvim-neo-tree/neo-tree.nvim",
+    "saghen/blink.cmp",
     opts = {
-      sources = { "filesystem", "buffers", "git_status" },
-      window = {
-        position = "right",
+      signature = {
+        enabled = true,
+      },
+      completion = {
+        ghost_text = { enabled = true },
+        accept = {
+          auto_brackets = {
+            enabled = false,
+          },
+        },
       },
     },
   },

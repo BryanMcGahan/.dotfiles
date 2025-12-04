@@ -76,3 +76,14 @@ case ":$PATH:" in
 esac
 # pnpm end
 . "/Users/bwmmwb/.deno/env"
+
+# bun completions
+[ -s "/Users/bwmmwb/.bun/_bun" ] && source "/Users/bwmmwb/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
