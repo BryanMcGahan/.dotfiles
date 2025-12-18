@@ -4,14 +4,14 @@ return {
     opts = {
       style = "night",
       light_style = "day",
-      transparent = false,
+      transparent = true,
       styles = {
         -- Style to be applied to different syntax groups
         -- Value is any valid attr-list value for `:help nvim_set_hl`
         comments = { italic = true },
         keywords = { italic = false, bold = true },
         functions = {
-          bold = false,
+          bold = true,
         },
         -- Background styles. Can be "dark", "transparent" or "normal"
         floats = "normal", -- style for floating windows
@@ -22,7 +22,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "tokyonight",
     },
   },
   {
@@ -60,4 +60,13 @@ return {
       },
     },
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      close_if_last_window = true,
+      window = {
+        position = "right"
+      }
+    }
+  }
 }
