@@ -17,7 +17,7 @@ end
 -- config.color_scheme = 'flexoki-dark'
 -- config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "iceberg-dark"
--- config.color_scheme = "tokyonight"
+config.color_scheme = "tokyonight"
 -- config.color_scheme = "One Dark (Gogh)"
 -- config.color_scheme = "OneDark (base16)"
 -- config.color_scheme = 'OneHalfDark'
@@ -33,7 +33,7 @@ end
 -- config.color_scheme = "Gruvbox dark, hard (base16)"
 -- config.color_scheme = "GruvboxDark"
 -- config.color_scheme = "Gruvbox Material (Gogh)"
-config.color_scheme = "GruvboxDarkHard"
+-- config.color_scheme = "GruvboxDarkHard"
 -- config.color_scheme = "mellow"
 -- config.color_scheme = "Vesper"
 -- config.color_scheme = "Catppuccin Mocha"
