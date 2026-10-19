@@ -1,0 +1,12 @@
+font-thicken=true
+
+macos-titlebar-style = transparent
+macos-window-buttons = hidden
+macos-option-as-alt = true
+
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+
+################################################
+# keybinds
+keybind=shift+ctrl+r=reload_config
+
